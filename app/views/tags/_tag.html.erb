@@ -1,0 +1,4 @@
+<%= link_to tag.name, tag_path(tag), class: 'article_tag' %>, 
+<% if current_page?(tags_path) %>
+  <%= link_to 'Delete', tag_path(tag), method: :delete, data: {confirm: "Are you sure you want to delete this tag?"} %><br>
+<% end %>
